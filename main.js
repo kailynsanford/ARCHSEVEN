@@ -6,7 +6,7 @@ window.addEventListener('load', function(){
 
     // Create an image element for the enemy sprite
     const enemyImg = new Image();
-    enemyImg.src = './images/enemy.png'; // Change the path to your enemy sprite
+    enemyImg.src = './images/skull.png'; // Change the path to your enemy sprite
 
     class Enemy {
         constructor(x, y, speed) {
