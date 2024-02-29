@@ -41,3 +41,18 @@ export class WalkRight extends State {
         }
     }
 }
+export class WalkLeft extends State {
+    constructor(player){
+        super('WALK_LEFT');
+        this.player = player;
+    }
+    enter(){
+        this.player.frameY = 2;
+
+    }
+    handleInput(input){
+        if (input.includes('ArrowLeft')){
+            this.player.setState(states.WALK_LEFT);
+        }
+    }
+}
