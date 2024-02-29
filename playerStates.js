@@ -17,6 +17,7 @@ class State {
     }
     enter(){
         this.player.frameY = 0;
+        this.player.maxFrame = 0;
 
     }
     handleInput(input){
@@ -33,7 +34,7 @@ export class WalkRight extends State {
     }
     enter(){
         this.player.frameY = 1;
-
+        this.player.maxFrame = 1;
     }
     handleInput(input){
         if (input.includes('ArrowRight')){
@@ -48,7 +49,7 @@ export class WalkLeft extends State {
     }
     enter(){
         this.player.frameY = 2;
-
+        this.player.maxFrame = 1;
     }
     handleInput(input){
         if (input.includes('ArrowLeft')){

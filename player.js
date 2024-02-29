@@ -65,38 +65,3 @@ export class Player {
         this.currentState.enter();
     }
 }
-// Define Sitting, WalkRight, and WalkLeft classes with getMaxFrame() method
-class Sitting {
-    constructor(player) {
-        this.player = player;
-    }
-    enter() {
-        // Enter sitting state
-    }
-    handleInput(input) {
-        // Handle input for sitting state
-    }
-    getMaxFrame() {
-        return 1; // For a sprite with one frame
-    }
-}
-
-class WalkRight {
-    constructor(player) {
-        this.player = player;
-    }
-    // Implement methods for WalkRight state
-    getMaxFrame() {
-        return 2; // For a sprite with two frames
-    }
-}
-
-class WalkLeft {
-    constructor(player) {
-        this.player = player;
-    }
-    // Implement methods for WalkLeft state
-    getMaxFrame() {
-        return 2; // For a sprite with two frames
-    }
-}
