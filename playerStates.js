@@ -21,11 +21,13 @@ class State {
 
     }
     handleInput(input){
-        if (this.player.states !== states.SITTING && input.length === 0){
-            this.player.setState(states.SITTING);
-        }
+        if (input.includes('ArrowRight')) {
+            this.player.setState(states.WALK_RIGHT);
+        } else if (input.includes('ArrowLeft')) {
+            this.player.setState(states.WALK_LEFT);
         }
     }
+}
 
 export class WalkRight extends State {
     constructor(player){
@@ -37,8 +39,8 @@ export class WalkRight extends State {
         this.player.maxFrame = 1;
     }
     handleInput(input){
-        if (input.includes('ArrowRight')){
-            this.player.setState(states.WALK_RIGHT);
+        if (!input.includes('ArrowRight')){
+            this.player.setState(states.SITTING);
         }
     }
 }
@@ -52,8 +54,8 @@ export class WalkLeft extends State {
         this.player.maxFrame = 1;
     }
     handleInput(input){
-        if (input.includes('ArrowLeft')){
-            this.player.setState(states.WALK_LEFT);
+        if (!input.includes('ArrowLeft')){
+            this.player.setState(states.SITTING);
         }
     }
 }
