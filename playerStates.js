@@ -20,11 +20,11 @@ class State {
 
     }
     handleInput(input){
-        if (input.includes('ArrowLeft') && input.includes ('ArrowRight')){
+        if (this.plwayerstates !== states.SITTING && input.length === 0){
             this.player.setState(states.SITTING);
         }
+        }
     }
-}
 
 export class WalkRight extends State {
     constructor(player){
