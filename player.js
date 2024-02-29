@@ -1,4 +1,4 @@
-import { SITTING , walkRight , walkLeft} from './playerStates.js';
+import { Sitting , WalkRight , WalkLeft} from './playerStates.js';
 
 export class Player {
     constructor(game){

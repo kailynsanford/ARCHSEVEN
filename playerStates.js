@@ -1,5 +1,5 @@
 const states = {
-    SITTING = 0,
+    SITTING: 0,
     WALK_RIGHT: 1,
     WALK_LEFT: 2,
 }
@@ -10,7 +10,7 @@ class State {
     }
 }
 
-    export class SITTING extends State {
+    export class Sitting extends State {
     constructor(player){
         super('SITTING');
         this.player = player;
@@ -26,7 +26,7 @@ class State {
     }
 }
 
-export class WALK_RIGHT extends State {
+export class WalkRight extends State {
     constructor(player){
         super('WALK_RIGHT');
         this.player = player;
