@@ -20,7 +20,7 @@ class State {
 
     }
     handleInput(input){
-        if (input.includes('ArrowLeft') || input.includes ('ArrowRight')){
+        if (input.includes('ArrowLeft') && input.includes ('ArrowRight')){
             this.player.setState(states.SITTING);
         }
     }
