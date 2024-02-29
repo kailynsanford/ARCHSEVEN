@@ -6,11 +6,16 @@ window.addEventListener('load', function(){
     const ctx=canvas.getContext('2d');
     canvas.width = 500;
     canvas.height = 500;
+     // Create an image element
+     const img = new Image();
 
-    // Define a background image or color
-    const backgroundImage = new Image();
-    backgroundImage.src = './purgatory.png'; // Provide the path to your background image
+     // Set the source of the image
+     img.src = './images/purgatory.png';
 
+     // When the image loads, draw it on the canvas
+     img.onload = function() {
+         ctx.drawImage(img, 0, 0); // Draw the image at position (0, 0)
+     }
     class Game {
         constructor (width, height) {
             this.width = width;
