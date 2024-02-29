@@ -3,8 +3,8 @@ import { SITTING , walkRight , walkLeft} from './playerStates.js';
 export class Player {
     constructor(game){
         this.game = game;
-        this.width = 26;
-        this.height= 28;
+        this.width = 52;
+        this.height= 56;
         this.x=0;
         this.y= this.game.height - this.height;
         this.vy = 0;
