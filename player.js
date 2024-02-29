@@ -23,7 +23,7 @@ export class Player {
         this.currentState.enter();
     }
     update(input, deltaTime){
-        this.currentStates.handleInput(input);
+        this.currentState.handleInput(input);
         // horizontal movement
         this.x += this.speed;
         if (input.includes('ArrowRight')) this.speed = this.maxSpeed;
