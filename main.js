@@ -6,7 +6,16 @@ window.addEventListener('load', function(){
     const ctx=canvas.getContext('2d');
     canvas.width = 500;
     canvas.height = 500;
+     // Create an image element
+     const img = new Image();
 
+     // Set the source of the image
+     img.src = './images/purgatory.png';
+
+     // When the image loads, draw it on the canvas
+     img.onload = function() {
+         ctx.drawImage(img, 0, 0); // Draw the image at position (0, 0)
+     }
     class Game {
         constructor (width, height) {
             this.width = width;
@@ -35,7 +44,4 @@ window.addEventListener('load', function(){
         requestAnimationFrame(animate);
     }
     animate(0);
-<<<<<<< HEAD
-=======
 })
->>>>>>> 7778264e2ac7d687812afc6ab0f60db549b161be
