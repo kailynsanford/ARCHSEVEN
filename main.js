@@ -7,6 +7,10 @@ window.addEventListener('load', function(){
     canvas.width = 500;
     canvas.height = 500;
 
+    // Define a background image or color
+    const backgroundImage = new Image();
+    backgroundImage.src = './purgatory.png'; // Provide the path to your background image
+
     class Game {
         constructor (width, height) {
             this.width = width;
