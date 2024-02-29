@@ -1,10 +1,10 @@
-import { Sitting } from './playerStates.js';
+import { SITTING , walkRight , walkLeft} from './playerStates.js';
 
 export class Player {
     constructor(game){
         this.game = game;
-        this.width = 28;
-        this.height= 26;
+        this.width = 26;
+        this.height= 28;
         this.x=0;
         this.y= this.game.height - this.height;
         this.vy = 0;
@@ -14,11 +14,12 @@ export class Player {
         this.frameY = 0;
         this.speed = 0;
         this.maxSpeed = 10;
-        this.states = [new Sitting(this)];
+        this.states = [new SITTING(this), new walkRight(this)];
         this.currentState = this.states[0];
         this.currentState.enter();
     }
     update(input){
+        this.currentStates.handleInput(input);
         // horizontal movement
         this.x += this.speed;
         if (input.includes('ArrowRight')) this.speed = this.maxSpeed;
@@ -45,6 +46,10 @@ export class Player {
         this.height)
     }
     onGround(){
-        return this.y >= this.game.height - this.height
+        return this.y >= this.game.height - this.height;
+    }
+    setState(state){
+        this.currentState = this.states[state]
+        this.currentState.enter();
     }
 }
