@@ -1,7 +1,7 @@
 const states = {
     SITTING = 0,
-    walkRight: 1,
-    walkLeft: 2,
+    WALK_RIGHT: 1,
+    WALK_LEFT: 2,
 }
 
 class State {
@@ -26,9 +26,9 @@ class State {
     }
 }
 
-export class walkRight extends State {
+export class WALK_RIGHT extends State {
     constructor(player){
-        super('walkRight');
+        super('WALK_RIGHT');
         this.player = player;
     }
     enter(){
@@ -37,7 +37,7 @@ export class walkRight extends State {
     }
     handleInput(input){
         if (input.includes('ArrowRight')){
-            this.player.setState(states.walkRight);
+            this.player.setState(states.WALK_RIGHT);
         }
     }
 }

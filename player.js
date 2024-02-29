@@ -14,7 +14,7 @@ export class Player {
         this.frameY = 0;
         this.speed = 0;
         this.maxSpeed = 10;
-        this.states = [new SITTING(this), new walkRight(this)];
+        this.states = [new SITTING(this), new WALK_RIGHT(this)];
         this.currentState = this.states[0];
         this.currentState.enter();
     }
