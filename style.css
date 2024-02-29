@@ -6,7 +6,7 @@
 body {
     margin: 0;
     padding: 0;
-    background: url('purgatory.png') no-repeat center center fixed;
+    background: url('images/purgatory.png') no-repeat center center fixed;
     /* Adjust the properties as needed */
     background-size: cover;
     /* Optionally, add other styles */
