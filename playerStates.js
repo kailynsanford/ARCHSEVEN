@@ -21,7 +21,7 @@ class State {
 
     }
     handleInput(input){
-        if (this.playerstates !== states.SITTING && input.length === 0){
+        if (this.player.states !== states.SITTING && input.length === 0){
             this.player.setState(states.SITTING);
         }
         }
