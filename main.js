@@ -16,6 +16,14 @@ window.addEventListener('load', function(){
      img.onload = function() {
          ctx.drawImage(img, 0, 0); // Draw the image at position (0, 0)
      }
+     img.onerror = function() {
+        console.error("Error loading image:", img.src);
+    };
+    
+    img.onload = function() {
+        console.log("Image loaded successfully");
+        ctx.drawImage(img, 0, 0);
+    };
     class Game {
         constructor (width, height) {
             this.width = width;
