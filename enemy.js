@@ -1,6 +1,6 @@
 // This is the enemy object
 function Enemy(x, y) {
-    this.sprite = "skull.png"; // Corrected the string value
+    this.sprite = "./images/skull.png"; // Corrected the string value
     this.x = x;
     this.y = y;
     this.enemyBullets = []; // Array to store enemy bullets
